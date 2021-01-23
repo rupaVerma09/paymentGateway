@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dto-app"
+    }
+  },
+  "defaultProject": "dto-app",
+  "cli": {
+    "analytics": "2beab120-8a5f-4874-bdcd-57049902b609"
+  }
 }

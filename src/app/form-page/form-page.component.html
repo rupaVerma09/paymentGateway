@@ -1,0 +1,100 @@
+<div class="creditCardForm">
+    <div class="heading">
+        <h1>Credit Card Payment Details</h1>
+    </div>
+    <div class="payment">
+        <form [formGroup]="paymentForm" >
+            <div class="form-row">
+                
+                <div class="form-group col-5">
+                    <label>Card Number</label>
+                    <input type="text" formControlName="cardNumber" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.cardNumber.errors }" />
+                    <span *ngIf="!f.cardNumber.pristine && f.cardNumber.errors" class="invalid-feedback">
+                        <span *ngIf="f.cardNumber.errors.required">Card Number is required</span>
+                        <span *ngIf="f.cardNumber.errors">Card Number is incorrect</span>
+                    </span>
+                </div>
+
+                <div class="form-group col">
+                    <label>Expiration Date</label><br>
+                    <select formControlName="month" class="form-control dateInput"
+                        [ngClass]="{ 'is-invalid': submitted && f.expirationDate.errors }" placeholder="January">
+                        <option value="01">January</option>
+                        <option value="02">February </option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    &nbsp;
+                    <select class="form-control dateInput" formControlName="year">
+                        <option value="2016"> 2016</option>
+                        <option value="2017"> 2017</option>
+                        <option value="2018"> 2018</option>
+                        <option value="2019"> 2019</option>
+                        <option value="2020"> 2020</option>
+                        <option value="2021"> 2021</option>
+                        <option value="2022"> 2022</option>
+                        <option value="2023"> 2023</option>
+                        <option value="2024"> 2024</option>
+                        <option value="2025"> 2025</option>
+                        <option value="2026"> 2026</option>
+                        <option value="2027"> 2027</option>
+                        <option value="2028"> 2028</option>
+                        <option value="2029"> 2029</option>
+                    </select>
+    
+                    <div *ngIf="!f.year.pristine && f.year.errors" class="invalid-feedback">
+                        <span *ngIf="f.year.errors.required">Expiration Date is required</span>
+                    </div>
+                </div>
+
+                <div class="form-group col-5">
+                    <label>Card Holder Name</label>
+                    <input type="text" formControlName="cardHolder" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.cardHolder.errors }" />
+                    <div *ngIf="!f.cardHolder.pristine && f.cardHolder.errors" class="invalid-feedback">
+                        <span *ngIf="f.cardHolder.errors.required">CardHolder Name is required</span>
+                        <span *ngIf="f.cardHolder.errors">Card Number is incorrect</span>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="form-group">
+                <label>CVV</label>
+                <input type="text" formControlName="cvv" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.cvv.errors }">
+                    <span *ngIf="!f.cvv.pristine && f.cvv.errors" class="invalid-feedback">
+                        <span *ngIf="f.cvv.errors.required">Card Number is required</span>
+                        <span *ngIf="f.cvv.errors">Card Number is incorrect</span>
+                    </span>
+            </div>
+
+            <div class="form-group">
+                <label>Amount</label>
+                <input type="text" formControlName="amount" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.amount.errors }" />
+                <div *ngIf="!f.cvv.pristine && f.amount.errors" class="invalid-feedback">
+                    <span *ngIf="f.amount.errors.required">Amount is required</span>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                
+                <button class="btn btn-secondary" (click)="onSubmit()">Confirm</button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+

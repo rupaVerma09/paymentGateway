@@ -1,0 +1,61 @@
+.creditCardForm {
+    max-width: 500px;
+    background-color:white;
+    margin: 100px auto;
+    overflow: hidden;
+    color: #4c4e56;
+    height: 550px;
+    font-size: 18px;
+    padding: 10px;
+    box-shadow: 2px 2px 8px 7px rgb(198 198 198 / 65%);
+    border-radius: 10px;
+    padding: 40px 40px 0px 40px;}
+
+.creditCardForm .heading h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #48989b;
+    margin: 0px -10px 20px -10px;
+}
+.btn{
+    height: 42px;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 24px;
+    background-color: #48989b;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 1px rgb(215 214 214 / 65%);
+    border: none;
+}
+input.ng-invalid.ng-touched{
+    border-color: red;
+}
+input{
+    width: 98%;
+    height: 36px;
+    font-size:18px;
+   color: rgb(172, 166, 166);
+   margin-bottom: 10px;
+   border-radius: 5px;
+   border: solid 1px;
+   border: solid 1px #c9bebe;
+   margin-top: 5px;
+}
+.dateInput{
+    height: 36px;
+    width: 242px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: solid 1px;
+    border: solid 1px #c9bebe;
+    margin-top: 5px;
+}
+span{
+    color: red;
+    font-size: 15px;
+}
+label{
+    font-weight: 500;
+    color: grey;
+}

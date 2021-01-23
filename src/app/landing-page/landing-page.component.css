@@ -1,0 +1,16 @@
+
+button{
+    position: absolute;
+    right: 30%;
+    left: 35%;
+    top: 30%;
+    height: 105px;
+    width: 409px;
+    background-color: #48989b;
+    color: white;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 4px 4px 8px 1px rgb(201 207 207);
+    border: none;}
